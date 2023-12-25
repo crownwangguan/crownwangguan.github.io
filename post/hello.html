@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="relative h-full antialiased dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.png" />
+    
+		<link href="../_app/immutable/assets/0.xWzrssLg.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/3.oUHucii2.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.sQJFu0jK.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.p95La9n0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.c9o0yU6S.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.x33frxYc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.0HuHagjb.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.IU5UhBmJ.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Ylce1FpE.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/info.nsuE3pW7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.kL7WnXdR.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.bE88JFrr.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.nRvIijCr.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ArrowLeftIcon.ma6nvTjQ.js"><title>Lorem Ipsum - Guan Wang</title><!-- HEAD_svelte-7wmra1_START --><meta name="description" content="Lorem ipsum dolor sit amet"><meta name="author" content="Guan Wang"><meta property="og:url" content="https://sveltekit-blog-template.vercel.app/hello"><meta property="og:type" content="website"><meta property="og:title" content="Lorem Ipsum"><meta property="og:description" content="Lorem ipsum dolor sit amet"><meta property="og:image" content="https://og-image.vercel.app/**Lorem%20Ipsum**?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg"><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="https://sveltekit-blog-template.vercel.app"><meta property="twitter:url" content="https://sveltekit-blog-template.vercel.app/hello"><meta name="twitter:title" content="Lorem Ipsum"><meta name="twitter:description" content="Lorem ipsum dolor sit amet"><meta name="twitter:image" content="https://og-image.vercel.app/**Lorem%20Ipsum**?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg"><!-- HEAD_svelte-7wmra1_END -->
+    <script>
+      let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+      updateMode()
+      darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions)
+      window.addEventListener('storage', updateModeWithoutTransitions)
+
+      function updateMode() {
+        let isSystemDarkMode = darkModeMediaQuery.matches
+        let isDarkMode =
+          window.localStorage.isDarkMode === 'true' ||
+          (!('isDarkMode' in window.localStorage) && isSystemDarkMode)
+
+        if (isDarkMode) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+
+        if (isDarkMode === isSystemDarkMode) {
+          delete window.localStorage.isDarkMode
+        }
+      }
+
+      function disableTransitionsTemporarily() {
+        document.documentElement.classList.add('[&_*]:!transition-none')
+        window.setTimeout(() => {
+          document.documentElement.classList.remove('[&_*]:!transition-none')
+        }, 0)
+      }
+
+      function updateModeWithoutTransitions() {
+        disableTransitionsTemporarily()
+        updateMode()
+      }
+    </script>
+  </head>
+
+  <body class="h-full bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400">
+    <div>  <div class="flex flex-col min-h-screen "><div class="flex flex-col flex-grow w-full px-4 py-2"><header class="flex items-center justify-between w-full max-w-2xl py-4 mx-auto lg:pb-8"><a class="text-lg font-bold sm:text-2xl !text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-teal-600 dark:to-teal-400" href="/">Guan Wang</a> <button type="button" role="switch" aria-label="Toggle Dark Mode" aria-checked="true" class="w-5 h-5 sm:h-8 sm:w-8 sm:p-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="hidden text-zinc-500 dark:block"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="block text-zinc-400 dark:hidden"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></button></header> <main class="flex flex-col flex-grow w-full mx-auto"> <div class="root max-w-2xl mx-auto lg:max-w-none svelte-1eui11k"><div class="hidden lg:block pt-8"><div class="sticky top-0 w-full flex justify-end pt-11 pr-8"><a class="items-center justify-center hidden w-10 h-10 mb-8 transition bg-white rounded-full shadow-md -top-1 -left-16 lg:flex group shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus-visible:ring-2 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20" href="/posts" aria-label="Go back to posts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 transition stroke-zinc-500 group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400"><path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></a></div></div> <div class="w-full mx-auto overflow-x-hidden"><article><header class="flex flex-col"><h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">Lorem Ipsum</h1> <div class="relative z-10 order-first mb-3 flex text-zinc-500 dark:text-zinc-400 text-sm sm:text-base pl-3.5"><span class="absolute inset-y-0 left-0 flex items-center py-1" aria-hidden="true" data-svelte-h="svelte-17b1jh8"><span class="h-full w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span></span> <div class="flex"><time datetime="2022-01-02">January 2, 2022</time> <span class="mx-1" data-svelte-h="svelte-3gu6cy">•</span> <span>1 min read</span></div></div></header>  <div class="prose dark:prose-invert "><p data-svelte-h="svelte-11asuyg">Lorem ipsum dolor sit amet</p></div></article></div>  <div class="hidden xl:block pt-10"><aside class="sticky hidden w-48 ml-8 xl:block top-8" aria-label="Table of Contents"> <div class="relative flex flex-col items-start group ">  <div class="relative z-10 flex-1 text-sm text-zinc-600 dark:text-zinc-400"> <ul class="flex flex-col gap-2"></ul> </div> </div></aside></div> </div></main></div></div> 
+			
+			<script>
+				{
+					__sveltekit_5xknao = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: null
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,{"type":"data","data":{post:{title:"Lorem Ipsum",date:"2022-01-02",headings:[],slug:"hello",isIndexFile:false,preview:{html:"\u003Cp data-svelte-h=\"svelte-11asuyg\">Lorem ipsum dolor sit amet\u003C/p>",text:"Lorem ipsum dolor sit amet"},readingTime:"1 min read",next:void 0,previous:void 0}},"uses":{"params":["slug"]}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.sQJFu0jK.js"),
+						import("../_app/immutable/entry/app.x33frxYc.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
